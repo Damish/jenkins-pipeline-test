@@ -6,13 +6,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Build the Maven project
                 sh 'gradle clean build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'gradle test'
             }
         }
         stage('Run Project') {
             steps {
-                // Build the Maven project
                 sh 'gradle bootRun'
             }
         }
