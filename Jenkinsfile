@@ -1,11 +1,9 @@
 pipeline {
     agent any
+    tools {
+        gradle 'Gradle_8'
+    }
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
         stage('Build') {
             steps {
                 // Build the Maven project
