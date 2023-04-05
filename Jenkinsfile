@@ -7,7 +7,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the Maven project
-                sh 'gradle build'
+                sh 'gradle build --build-cache'
+            }
+        }
+        stage('Run Project') {
+            steps {
+                // Build the Maven project
+                sh 'gradle run'
             }
         }
     }
