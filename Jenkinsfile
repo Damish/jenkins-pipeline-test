@@ -14,10 +14,10 @@ pipeline {
                 sh 'gradle test'
             }
         }
-        stage('Run Project') {
-            steps {
-                sh 'gradle bootRun'
-            }
-        }
+//         stage('Run Project') {
+//             steps {
+//                 sh 'gradle bootRun'
+//             }
+//         }
     }
 }
