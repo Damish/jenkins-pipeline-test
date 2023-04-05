@@ -16,8 +16,13 @@ public class JenkinsPipelineTestApplication {
 	}
 
 	@GetMapping(value = "/")
-	public String test(){
+	public String test1(){
 		return "Hello world!";
+	}
+
+	@GetMapping(value = "/test")
+	public String test2(){
+		return "Jenkins pipeline works!";
 	}
 
 }
